@@ -1,0 +1,101 @@
+/* Pocket Mobile 1.0.0. MIT. */
+
+body.theme-light {
+  --background-primary: #fafcfe;
+  --background-primary-alt: #fafcfe;
+  --background-secondary: #ecf3fa;
+  --background-secondary-alt: #ecf3fa;
+  --background-modifier-form-field: #fafcfe;
+  --background-modifier-border: #8496ac;
+  --background-modifier-border-hover: #8496ac;
+  --background-modifier-border-focus: #164c99;
+  --background-modifier-hover: color-mix(in srgb, #164c99 12%, #ecf3fa);
+  --background-modifier-active-hover: color-mix(in srgb, #164c99 18%, #ecf3fa);
+  --text-normal: #15243b;
+  --text-muted: #45536a;
+  --text-faint: #45536a;
+  --text-accent: #164c99;
+  --text-accent-hover: #63428b;
+  --text-on-accent: #fafcfe;
+  --interactive-accent: #164c99;
+  --interactive-accent-hover: #63428b;
+  --text-selection: color-mix(in srgb, #164c99 25%, #fafcfe);
+  --text-highlight-bg: color-mix(in srgb, #894322 23%, #fafcfe);
+  --color-blue: #164c99;
+  --color-orange: #894322;
+  --color-green: #17674e;
+  --color-purple: #63428b;
+  --code-background: #ecf3fa;
+  --code-normal: #15243b;
+  --code-comment: #45536a;
+  --code-function: #164c99;
+  --code-keyword: #63428b;
+  --code-string: #17674e;
+  --link-color: #164c99;
+  --link-external-color: #17674e;
+  --icon-color: #45536a;
+  --nav-item-color: #45536a;
+  --nav-item-color-active: #15243b;
+  --tab-text-color: #45536a;
+}
+body.theme-dark {
+  --background-primary: #172339;
+  --background-primary-alt: #172339;
+  --background-secondary: #202f48;
+  --background-secondary-alt: #202f48;
+  --background-modifier-form-field: #172339;
+  --background-modifier-border: #7089ad;
+  --background-modifier-border-hover: #7089ad;
+  --background-modifier-border-focus: #9bd2ff;
+  --background-modifier-hover: color-mix(in srgb, #9bd2ff 12%, #202f48);
+  --background-modifier-active-hover: color-mix(in srgb, #9bd2ff 18%, #202f48);
+  --text-normal: #eef5ff;
+  --text-muted: #b9c8df;
+  --text-faint: #b9c8df;
+  --text-accent: #9bd2ff;
+  --text-accent-hover: #d4b8ff;
+  --text-on-accent: #172339;
+  --interactive-accent: #9bd2ff;
+  --interactive-accent-hover: #d4b8ff;
+  --text-selection: color-mix(in srgb, #9bd2ff 25%, #172339);
+  --text-highlight-bg: color-mix(in srgb, #ffc089 23%, #172339);
+  --color-blue: #9bd2ff;
+  --color-orange: #ffc089;
+  --color-green: #9ae6c3;
+  --color-purple: #d4b8ff;
+  --code-background: #202f48;
+  --code-normal: #eef5ff;
+  --code-comment: #b9c8df;
+  --code-function: #9bd2ff;
+  --code-keyword: #d4b8ff;
+  --code-string: #9ae6c3;
+  --link-color: #9bd2ff;
+  --link-external-color: #9ae6c3;
+  --icon-color: #b9c8df;
+  --nav-item-color: #b9c8df;
+  --nav-item-color-active: #eef5ff;
+  --tab-text-color: #b9c8df;
+}
+
+.is-mobile {
+  --list-indent: 1.18em;
+  --list-spacing: 0.12em;
+  --callout-padding: 8px 10px;
+  --heading-spacing: 0.85em;
+}
+.is-mobile .markdown-rendered :is(.table-wrapper, pre),
+.is-mobile .markdown-source-view .cm-table-widget { max-width: 100%; overflow-x: auto; }
+.is-mobile :is(.view-header .clickable-icon, .mobile-toolbar .clickable-icon) { min-width: 44px; min-height: 44px; }
+.is-mobile .nav-file-title-content { overflow-wrap: anywhere; }
+
+.workspace-leaf-content :focus-visible,
+.modal :focus-visible,
+.menu :focus-visible {
+  outline: 2px solid var(--text-accent);
+  outline-offset: -2px;
+}
+
+.markdown-rendered .list-bullet::after,
+.markdown-source-view .list-bullet::after {
+  background-color: var(--text-muted);
+}
