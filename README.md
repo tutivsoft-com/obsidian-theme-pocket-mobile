@@ -2,7 +2,7 @@
 
 An Obsidian theme designed around phone screens and touch navigation.
 
-Source version 1.0.1. Modes supported: Dark and light. Tested in Obsidian 1.15.1 on Windows.
+Source version 3.6.0. Modes supported: Dark and light. Tested in Obsidian 1.15.1 on Windows.
 
 The compact layout targets the mobile interface. Device compatibility has not been verified on physical Android or iOS devices.
 
