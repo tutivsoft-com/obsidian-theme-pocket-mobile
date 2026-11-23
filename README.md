@@ -2,9 +2,9 @@
 
 An Obsidian theme designed around phone screens and touch navigation.
 
-Source version 3.6.0. Modes supported: Dark and light. Tested in Obsidian 1.15.1 on Windows.
+Source version 3.6.1. The theme supports dark and light modes. The preview screenshots are from Obsidian 1.15.1 on Windows.
 
-The compact layout targets the mobile interface. Device compatibility has not been verified on physical Android or iOS devices.
+On mobile, the theme keeps lists and callouts compact, wraps long file and folder names, and lets wide tables and rendered code blocks scroll horizontally. It gives phone editor toolbar actions a minimum width of 44 pixels. Physical Android and iOS testing is pending.
 
 ## Preview
 
@@ -14,8 +14,19 @@ The compact layout targets the mobile interface. Device compatibility has not be
 
 ## Install manually
 
-1. Download `manifest.json` and `theme.css` from [release 1.0.0](https://github.com/tutivsoft-com/obsidian-theme-pocket-mobile/releases/tag/1.0.0).
+1. Download `manifest.json` and `theme.css` from [release 3.6.0](https://github.com/tutivsoft-com/obsidian-theme-pocket-mobile/releases/tag/3.6.0).
 2. Put both files in `.obsidian/themes/Pocket Mobile/` in your vault.
 3. Open **Settings > Appearance** and select **Pocket Mobile**. Choose a supported base colour scheme.
+
+## Check the source
+
+With Python 3.10 or later, install the two test dependencies and run the suite from the repository root:
+
+```sh
+python -m pip install tinycss2 cssselect2
+python -B -m unittest discover -s tests -v
+```
+
+The tests parse the stylesheet and check its selectors and declarations against a representative Obsidian workspace. They run without opening Obsidian.
 
 See the [original design plan](PLAN.md). [MIT license](LICENSE).

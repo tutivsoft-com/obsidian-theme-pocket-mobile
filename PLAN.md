@@ -2,9 +2,7 @@
 
 An Obsidian theme designed around phone screens and touch navigation.
 
-**Status: planning only. No theme code has been written.**
-
-Plan date: 13 November 2026. This repository currently contains this planning README only. The name is a descriptive working name; Community name availability must be checked before any future submission.
+Historical design plan dated 13 November 2026. See the [README](README.md) for the current theme, installation instructions and checks.
 
 Search keywords: Obsidian theme, mobile, Android, iPhone, compact notes, small screen.
 
@@ -18,7 +16,7 @@ Mobile users report wasted space, deep list indentation, large nested callouts a
 
 - [Requests about mobile spacing, nesting and wide tables](https://www.reddit.com/r/ObsidianMD/comments/1qbvcfo/velocity_20_major_theme_update_built_for_obsidian/)
 
-The Reddit links come from the preceding idea research and represent qualitative demand, not a market-size estimate or proof that existing themes do not solve the problem. For Pure OLED Rainbow, the additional requirement comes directly from the owner. Other themes and snippets may already address parts of these needs.
+The discussion provides examples of the issues that prompted this theme.
 
 ## Planned appearance and features
 
@@ -33,7 +31,7 @@ The Reddit links come from the preceding idea research and represent qualitative
 
 Plan both light and dark modes on mobile and a compatible desktop appearance.
 
-## Future implementation and release plan
+## Original implementation and release plan
 
 1. Confirm the final palette and layout against the requirements above.
 2. Build the theme only after Rahul authorises implementation. Prefer supported Obsidian CSS variables and keep source readable.
@@ -50,17 +48,13 @@ Official references for later implementation:
 - [Submit a theme](https://docs.obsidian.md/Themes/App%20themes/Submit%20your%20theme)
 - [Developer policies](https://docs.obsidian.md/community-directory/developer-policies)
 
-These are future work items. No release, installation instructions, compatibility certification or Community listing is being claimed by this planning repository.
+The [README](README.md) tracks the available release and current checks.
 
-## Acceptance checklist for later implementation
+## Items to check for each release
 
 - [ ] Test Android and iOS before claiming support for both.
 - [ ] Check narrow screens, keyboard-open states, long filenames and nested lists/callouts.
 - [ ] Check table scrolling, toolbar visibility and touch target sizes.
-- [ ] Confirm every claimed feature has been implemented and tested before replacing the planning-only status.
+- [ ] Confirm that the README matches the implemented and tested features.
 - [ ] Review screenshots for private information and verify all published documentation and asset paths.
 - [ ] Verify the default branch, release revision and uploaded assets before calling any future release complete.
-
-## Current boundary
-
-Only repository creation and this Markdown plan are authorised in this task. Do not add theme CSS, manifests, screenshots, release tags or submissions as part of this planning work. Future work stays on this repository's verified primary branch.

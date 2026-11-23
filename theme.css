@@ -1,4 +1,4 @@
-/* Pocket Mobile 3.6.0. MIT. */
+/* Pocket Mobile 3.6.1. MIT. */
 
 body.theme-light {
   --background-primary: #fafcfe;
@@ -83,10 +83,29 @@ body.theme-dark {
   --callout-padding: 8px 10px;
   --heading-spacing: 0.85em;
 }
-.is-mobile .markdown-rendered :is(.table-wrapper, pre),
-.is-mobile .markdown-source-view .cm-table-widget { max-width: 100%; overflow-x: auto; }
-.is-mobile :is(.view-header .clickable-icon, .mobile-toolbar .clickable-icon) { min-width: 44px; min-height: 44px; }
-.is-mobile .nav-file-title-content { overflow-wrap: anywhere; }
+.is-mobile .markdown-rendered :is(.el-table, .table-wrapper, pre),
+.is-mobile .markdown-source-view .cm-table-widget {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.is-mobile .markdown-rendered pre {
+  white-space: pre;
+}
+
+.is-mobile.is-phone .mobile-toolbar {
+  --toolbar-option-width: 44px;
+}
+
+.is-mobile :is(.view-header .clickable-icon, .mobile-toolbar .clickable-icon) {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.is-mobile :is(.nav-file-title-content, .nav-folder-title-content) {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
 
 .is-mobile .markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
   padding-inline: 8px;
