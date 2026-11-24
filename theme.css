@@ -1,4 +1,4 @@
-/* Pocket Mobile 3.6.1. MIT. */
+/* Pocket Mobile 3.6.2. MIT. */
 
 body.theme-light {
   --background-primary: #fafcfe;
@@ -91,6 +91,15 @@ body.theme-dark {
 
 .is-mobile .markdown-rendered pre {
   white-space: pre;
+}
+
+.is-mobile .markdown-rendered pre > code {
+  white-space: inherit;
+}
+
+.is-mobile .markdown-rendered .callout.is-collapsible > .callout-title {
+  min-height: 44px;
+  align-items: center;
 }
 
 .is-mobile.is-phone .mobile-toolbar {

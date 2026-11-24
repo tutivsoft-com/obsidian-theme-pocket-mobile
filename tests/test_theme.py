@@ -12,7 +12,8 @@ THEME = (ROOT / "theme.css").read_text(encoding="utf-8")
 HOST = """
 .is-phone { --toolbar-option-width: 40px; }
 .is-tablet { --toolbar-option-width: 50px; }
-.markdown-rendered pre { white-space: pre-wrap; }
+.markdown-rendered pre, .markdown-rendered pre > code { white-space: pre-wrap; }
+.callout-title { min-height: 0; }
 .nav-file-title-content, .nav-folder-title-content {
     overflow-wrap: anywhere;
     white-space: pre;
@@ -25,7 +26,9 @@ WORKSPACE = """
     <div class="markdown-rendered">
       <div id="reading-table" class="el-table"><table /></div>
       <div id="embedded-table" class="table-wrapper"><table /></div>
-      <pre id="code"><code>long line of code</code></pre>
+      <pre id="code"><code id="code-text">long line of code</code></pre>
+      <div class="callout is-collapsible"><div id="fold-title" class="callout-title" /></div>
+      <div class="callout"><div id="plain-title" class="callout-title" /></div>
     </div>
     <div class="markdown-source-view mod-cm6">
       <div class="cm-contentContainer"><div id="editor" class="cm-content" /></div>
@@ -85,7 +88,9 @@ class ThemeTests(unittest.TestCase):
                 self.assertEqual(styles.get("overflow-x"), "auto")
                 self.assertEqual(styles.get("max-width"), "100%")
         self.assertEqual(self.computed(mode, "code")["white-space"], "pre")
+        self.assertEqual(self.computed(mode, "code-text")["white-space"], "inherit")
         self.assertEqual(self.computed("theme-dark", "code")["white-space"], "pre-wrap")
+        self.assertEqual(self.computed("theme-dark", "code-text")["white-space"], "pre-wrap")
         self.assertNotIn("overflow-x", self.computed("theme-dark", "reading-table"))
 
     def test_long_mobile_file_and_folder_names_can_wrap(self):
@@ -105,6 +110,12 @@ class ThemeTests(unittest.TestCase):
         self.assertEqual(view_action["min-width"], "44px")
         self.assertEqual(view_action["min-height"], "44px")
         self.assertNotIn("min-width", self.computed("theme-light", "view-action"))
+
+    def test_mobile_collapsible_callout_title_has_a_touch_target(self):
+        phone = "theme-light is-mobile is-phone"
+        self.assertEqual(self.computed(phone, "fold-title")["min-height"], "44px")
+        self.assertEqual(self.computed(phone, "plain-title")["min-height"], "0")
+        self.assertEqual(self.computed("theme-light", "fold-title")["min-height"], "0")
 
     def test_mobile_editor_keeps_padding_inside_focus_outline(self):
         phone = self.computed("theme-light is-mobile is-phone", "editor")

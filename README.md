@@ -2,9 +2,9 @@
 
 An Obsidian theme designed around phone screens and touch navigation.
 
-Source version 3.6.1. The theme supports dark and light modes. The preview screenshots are from Obsidian 1.15.1 on Windows.
+Source version 3.6.2. The theme supports dark and light modes. The preview screenshots are from Obsidian 1.15.1 on Windows.
 
-On mobile, the theme keeps lists and callouts compact, wraps long file and folder names, and lets wide tables and rendered code blocks scroll horizontally. It gives phone editor toolbar actions a minimum width of 44 pixels. Physical Android and iOS testing is pending.
+On mobile, the theme keeps lists and callouts compact, wraps long file and folder names, and lets wide tables and rendered code blocks scroll horizontally. Collapsible callout titles and phone editor toolbar actions have 44-pixel touch targets. Physical Android and iOS testing is pending.
 
 ## Preview
 
@@ -29,4 +29,4 @@ python -B -m unittest discover -s tests -v
 
 The tests parse the stylesheet and check its selectors and declarations against a representative Obsidian workspace. They run without opening Obsidian.
 
-See the [original design plan](PLAN.md). [MIT license](LICENSE).
+See the [UI test results](docs/ui-qa/2026-11-24/README.md). See the [original design plan](PLAN.md). [MIT license](LICENSE).
