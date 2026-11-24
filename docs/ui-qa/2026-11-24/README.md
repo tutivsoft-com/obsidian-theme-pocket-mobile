@@ -25,18 +25,32 @@ Obsidian's built-in mobile emulation provided the actual Obsidian phone layout i
 | Canvas, Bases and graph | Dark Canvas rendered the three fixture nodes and controls on phone and desktop. Light Bases rendered its local table and rows on both layouts. The desktop Graph view rendered its canvas and controls. |
 | Workspace panels | Desktop Outline and file properties displayed the fixture headings and metadata. |
 
-The desktop checks used the live Obsidian renderer. Phone actions used Obsidian controls in its mobile layout. Scrolling was verified through element scroll positions. Android and iOS touch delivery, keyboard, and safe-area behavior require native app coverage.
+The Windows phone checks used Obsidian controls in its mobile layout. Scrolling was verified through element scroll positions.
+
+## Native Android follow-up
+
+Obsidian 1.15.1 (build 404) ran on the retained Pixel_2 Android 17 emulator, API 37, with a 1,280 × 2,856 display at 480 dpi. The guest had no existing Obsidian install. The official APK matched its published SHA-256 digest and passed Android APK Signature Scheme v2 verification. The theme was loaded from a new synthetic local vault containing the 3.6.2 manifest and stylesheet. [Official Obsidian release](https://github.com/obsidianmd/obsidian-releases/releases/tag/v1.15.1)
+
+| Native case | Result |
+| --- | --- |
+| Local vault and file explorer | A tap selected the synthetic note. The dark theme showed its properties, checked and unchecked tasks, and nested lists. The long folder title wrapped across two lines. |
+| Nested callout | A tap on Tide estimate expanded the collapsed callout and displayed its text. |
+| Wide table | A horizontal swipe exposed Sample Reference in Live Preview. A second check in Reading view exposed the later columns without shifting the headings. |
+| Wide code | In Reading view the long JavaScript line stayed on one line. A horizontal swipe revealed the middle of the identifier inside its own block. |
+| Editing and keyboard | A tap switched to editing and placed the cursor in a list. The editor toolbar was visible above Gboard. Android reported `mInputShown=true`. The emulator keyboard preference was restored to its original value. |
+
+The guest lost its ADB connection during onboarding. The same running emulator reconnected without a restart, and the native checks finished. Obsidian was stopped afterward and Pixel_2 stayed online. Physical Android and iOS, native landscape, and device-specific safe areas remain unverified.
 
 ## Screenshots
 
-These ten original Obsidian PNG captures total 388,876 bytes. The captures show only synthetic test data.
+These ten Obsidian PNG captures total 536,929 bytes and show only synthetic test data. The two Android captures were resized for display.
 
 | Capture | State | Dimensions |
 | --- | --- | --- |
 | [01](01-dark-phone-reading.png) | Dark phone reading, properties and nested lists | 390 × 760 |
-| [02](02-dark-phone-nested-callout.png) | Dark phone expanded nested callout | 390 × 760 |
+| [02](02-dark-phone-nested-callout.png) | Dark Android expanded nested callout | 403 × 900 |
 | [03](03-dark-phone-wide-table.png) | Dark phone reading table scrolled sideways | 390 × 760 |
-| [04](04-dark-phone-wide-code.png) | Dark phone reading code block scrolled sideways | 390 × 760 |
+| [04](04-dark-phone-wide-code.png) | Dark Android reading table and code block after horizontal swipes | 403 × 900 |
 | [05](05-light-phone-live-preview.png) | Light phone Live Preview and editor toolbar | 390 × 760 |
 | [06](06-light-phone-source-selection.png) | Light phone source selection and toolbar at reduced height | 390 × 460 |
 | [07](07-light-phone-files.png) | Light phone file and folder names wrapped in the explorer | 390 × 760 |
